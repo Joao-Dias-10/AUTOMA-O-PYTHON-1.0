@@ -57,7 +57,6 @@ def jogar_no_banco():
     con = MySQLdb.connect(host='',user='',password='',database='')        
     tabela = pd.read_csv(r'C:/Users/User/Documents/BASE.csv',encoding='ISO-8859-1')
     cursorr = con.cursor()
-    #cursorr.execute("truncate dw_mis.motivos")
     arquivos = glob.glob('C:/Users/User/Documents/BASE/*.csv')
     for i in arquivos:
         tabela = pd.read_csv(rf'{i}', encoding='ISO-8859-1',sep = ";")
